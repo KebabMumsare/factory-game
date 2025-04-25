@@ -1,0 +1,12 @@
+{
+    "id": 5,
+    "name": "Sell",
+    "image": "res/sell.png",
+    "activeImage": "res/sell.png",
+    "rotation": "n",
+    "x": 0,
+    "y": 0,
+    "functional": false,
+    "actionInterval": 0,
+    "lastActionTime": 0
+}

@@ -1,0 +1,13 @@
+{
+    "id": 4,
+    "name": "Smelter",
+    "image": "res/smelter.png",
+    "activeImage": "res/smelter-active.png",
+    "rotation": "n",
+    "x": 0,
+    "y": 0,
+    "functional": true,
+    "actionInterval": 2000,
+    "lastActionTime": 0,
+    "stack": 0
+}

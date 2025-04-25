@@ -1,0 +1,9 @@
+{
+    "name": "Iron Ore",
+    "image": "res/iron-ore.png",
+    "value": 1,
+    "money": 1,
+    "speed": 1,
+    "x": 0,
+    "y": 0
+}

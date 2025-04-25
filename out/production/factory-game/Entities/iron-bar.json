@@ -1,0 +1,9 @@
+{
+    "name": "Iron Bar",
+    "image": "res/iron-bar.png",
+    "value": 1,
+    "money": 3,
+    "speed": 1,
+    "x": 0,
+    "y": 0
+}

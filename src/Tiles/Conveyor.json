@@ -1,0 +1,12 @@
+{
+    "id": 2,
+    "name": "Conveyor",
+    "image": "res/conveyor.png",
+    "activeImage": "res/conveyor.png",
+    "rotation": "n",
+    "x": 0,
+    "y": 0,
+    "functional": false,
+    "actionInterval": 0,
+    "lastActionTime": 0
+}

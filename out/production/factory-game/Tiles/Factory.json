@@ -1,0 +1,12 @@
+{
+    "id": 3,
+    "name": "Factory",
+    "image": "res/factory.png",
+    "activeImage": "res/factory.png",
+    "rotation": "n",
+    "x": 0,
+    "y": 0,
+    "functional": true,
+    "actionInterval": 4000,
+    "lastActionTime": 0
+}
