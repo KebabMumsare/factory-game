@@ -4,16 +4,23 @@ import Main.GamePanel;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class MarketUI extends JPanel {
     GamePanel gp;
+
+    Font font;
+
     JButton closeBtn;
     JPanel ordersPanel; // Panel to hold all orders
     JScrollPane scrollPane; // Scroll pane to make orders scrollable
-    
+    ArrayList<Objects> orders = new ArrayList<>();
     public MarketUI(GamePanel gp) {
+        font = new Font("Arial", Font.PLAIN, gp.tileSize * 2/3);
         this.gp = gp;
         this.setLayout(null);
         
@@ -79,6 +86,7 @@ public class MarketUI extends JPanel {
         g2.drawString("Market", 10, 35);
         updateOrders(5); // Example: create 10 orders
     }
+
     private void updateOrders(int numOrders) {
         ordersPanel.removeAll(); // Clear existing orders
         
@@ -100,10 +108,17 @@ public class MarketUI extends JPanel {
         ordersPanel.revalidate();
         ordersPanel.repaint();
     }
+
     public JPanel createOrder() {
+        Random rng = new Random();
         JPanel order = new JPanel();
         JButton dealBtn = null;
         JButton denyBtn = null;
+        JLabel request = null;
+        JLabel price = null;
+
+
+
         try {
             BufferedImage send = ImageIO.read(new File("res/deal-icon.png"));
             BufferedImage deny = ImageIO.read(new File("res/deny-icon.png"));
@@ -128,12 +143,16 @@ public class MarketUI extends JPanel {
             denyBtn.setActionCommand("DENY");
             dealBtn.addActionListener(gp.actionEvent);
             denyBtn.addActionListener(gp.actionEvent);
+
+
+
             return order;
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
+
     public void deal() {
         System.out.println("Deal button clicked");
     }
